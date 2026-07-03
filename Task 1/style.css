@@ -1,0 +1,255 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    color:#fff;
+}
+
+/* Header */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 70px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,.1);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo i{
+    font-size:20px;
+    color:#8b5cf6;
+}
+
+.logo h2{
+    font-size:22px;
+    letter-spacing:2px;
+}
+
+.count{
+    background:#8b5cf6;
+    padding:10px 22px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+/* Hero */
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:50px;
+    background:linear-gradient(to right,#8b5cf6,#06b6d4,#3b82f6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#d1d5db;
+    font-size:16px;
+    margin-bottom:35px;
+}
+
+/* Search */
+
+.search-filter{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.search-box{
+    width:350px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:40px;
+    display:flex;
+    align-items:center;
+    padding:14px 18px;
+}
+
+.search-box i{
+    color:#8b5cf6;
+    margin-right:10px;
+}
+
+.search-box input{
+    width:100%;
+    background:none;
+    border:none;
+    outline:none;
+    color:white;
+}
+
+/* Buttons */
+
+.filters button{
+    background:#1f2937;
+    color:white;
+    border:none;
+    padding:12px 22px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.filters button:hover,
+.filters .active{
+    background:#8b5cf6;
+}
+
+/* ========================= */
+/* Google/Pinterest Gallery */
+/* ========================= */
+
+.gallery{
+    width:90%;
+    margin:20px auto;
+    columns:3;
+    column-gap:8px;   /* Google jaisa chhota gap */
+}
+
+.card{
+    width:100%;
+    margin-bottom:8px;
+    break-inside:avoid;
+    overflow:hidden;
+    border-radius:12px;
+    position:relative;
+}
+
+.card img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:12px;
+    transition:.4s;
+}
+
+.card:hover img{
+    transform:scale(1.04);
+}
+
+.card::before{
+    content:"View Image";
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.45);
+    color:#fff;
+    opacity:0;
+    transition:.3s;
+    font-size:20px;
+}
+
+.card:hover::before{
+    opacity:1;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.gallery{
+    columns:2;
+}
+
+}
+
+@media(max-width:600px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.search-box{
+    width:100%;
+}
+
+.gallery{
+    columns:1;
+}
+
+}
+
+/* Popup */
+
+.modal{
+    display:none;
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    z-index:9999;
+}
+
+.modal-content{
+    display:block;
+    margin:40px auto;
+    max-width:80%;
+    max-height:80%;
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:white;
+    font-size:45px;
+    cursor:pointer;
+}
+
+/* Previous & Next Buttons */
+
+.nav-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    padding:12px 25px;
+    background:#8b5cf6;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#prev{
+    left:30px;
+}
+
+#next{
+    right:30px;
+}

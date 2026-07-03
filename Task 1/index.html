@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <i class="fa-solid fa-camera-retro"></i>
+        <h2>PIXEL GALLERY</h2>
+    </div>
+
+    <div class="count">9 Photos</div>
+
+</header>
+
+<section class="hero">
+
+    <h1>Explore Beautiful Images</h1>
+
+    <p>
+        Discover breathtaking moments captured from around the world.
+    </p>
+
+    <div class="search-filter">
+
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="search" placeholder="Search your favourite photos...">
+        </div>
+
+        <div class="filters">
+    <button class="active">All</button>
+
+    <a href="nature.html">
+        <button>Nature</button>
+    </a>
+    <button>Landmark</button>
+    <button>Animals</button>
+    <button>Mountains</button>
+</div>
+
+    </div>
+
+</section>
+
+<section class="gallery">
+
+    <div class="card" data-category="nature">
+        <img src="images/images.nature1.jfif" alt="Nature">
+    </div>
+
+    <div class="card" data-category="animal">
+        <img src="animal1.jfif" alt="Animals">
+    </div>
+
+    <div class="card" data-category="landmark">
+        <img src="image.landmark1.jfif" alt="Landmark">
+    </div>
+
+    <div class="card" data-category="nature">
+        <img src="images.nature2.jfif" alt="Nature">
+    </div>
+
+    <div class="card" data-category="mountains">
+        <img src="images.mountain1.jfif" alt="Mountains">
+    </div>
+
+    <div class="card" data-category="landmark">
+        <img src="image.landmark2.jfif" alt="Landmark">
+    </div>
+
+    <div class="card" data-category="animals">
+        <img src="images.animal2.jfif" alt="Animals">
+    </div>
+
+    <div class="card" data-category="mountains">
+        <img src="images.mountain2.jfif" alt="Mountains">
+    </div>
+
+    <div class="card" data-category="nature">
+        <img src="image.nature3.jfif" alt="Nature">
+    </div>
+</section>
+
+</section>
+
+<!-- Image Popup -->
+
+<div id="imageModal" class="modal">
+
+    <span class="close">&times;</span>
+
+    <img class="modal-content" id="modalImg">
+
+    <button id="prev" class="nav-btn">Previous</button>
+
+    <button id="next" class="nav-btn">Next</button>
+
+</div>
+
+ <script src="script.js"></script>  
+
+
+</body>
+</html>
